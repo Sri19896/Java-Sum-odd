@@ -1,0 +1,33 @@
+ublic class SumOddRange {
+    public static boolean isOdd(int number){
+        boolean x=true;
+        if (number >0){
+            if (number %2==1){
+                x=true;
+            }
+            else{
+                x=false;
+            }
+        }
+        else{
+            x=false;
+        }
+        
+        return x;
+    }
+    
+    public static int sumOdd(int start, int end ){
+        int sum=0;
+        
+        if ((start <0|| end <0)||(end<start)){
+            return -1;
+        }
+        else{
+            for( int i =start; i<= end;i++){
+                if(isOdd(i)){
+                    sum=sum+i;
+                }
+            }
+        } return sum;
+    }
+}
